@@ -6,9 +6,19 @@ body{
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .container {
-    width: 1208px;
+    display: flex;
+    width: 85%;
     padding: 51px 50px 77px 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* header section styles */
 header {
@@ -16,6 +26,27 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+@keyframes header-animation {
+    0%{
+        background:orchid;
+    }
+    25%{
+        background: lightgreen;
+    }
+    50%{
+        background: lightpink;
+    }
+    75%{
+        background: powderblue;
+    }
+    100%{
+        background-position-x: left;
+    }
+}
+header:hover{
+    animation: header-animation 10s ease-in-out 0ms infinite alternate-reverse;
 }
 .header-content {
     display: grid;
@@ -29,7 +60,7 @@ header {
     font-size: 64px;
     line-height: 80px;
     color: white;
-    width: 78%;
+    width: 81%;
     margin: 38px 0px 17px 0px;
 }
 .button {
@@ -44,6 +75,14 @@ header {
     justify-content: center;
     margin-bottom: 82px;
 }
+.button:hover{
+    transform: scale(1.2,1.2);
+    transition: 2s;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: black;
+    /* font-size: 1.2em; */
+}
 .button p {
     margin-right: 16px;
 }
@@ -51,5 +90,270 @@ header {
     width: 556px;
     height: 438px;
 }
+/* players section style */
+
+section.players-details {
+    /* width: 80%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */ 
+    padding: 51px 50px 77px 50px;
+    
+}
+.players {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    /* width: 1050px; */
+    /* justify-items: center; */
+    margin: top 70px;
+}
+.player {
+    /* width: 100% */
+    padding: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player-profile img {
+    width: 100%;
+    border-radius: 5px;
+}
+.player-info{
+    width: 100%;
+}
+.player-info h2 {
+    font-size: 28px;
+    margin: 16px 0px 10px 0px;
+}
+.player-info p {
+    font-size: 16px;
+    color: #6C6C6C;
+    margin-top: 0px;
+}
+/* game-shedule style */
+section.game-shedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 70px; */
+    padding: 51px 50px 77px 50px;
+}
+.shedule-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shedule-header h1 {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.shedule-header>h3 {
+    font-size: 16px;
+    /* text-align: center; */
+    color: #999999;
+}
+.shedules {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    grid-gap: 30px;
+    width: 90%;
+}
+.shidule {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    /* width: 100%; */
+    height: 215px;
+    justify-content: center;
+    padding: 15px;
+}
+.shidule >p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.teams {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    /* align-items: center; */
+}
+.teams p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team h3 {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+.team img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+/* gallery section style */
+section.gallery {
+    display: flex;
+    /* width: 1260px; */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 70px; */
+    padding: 51px 50px 77px 50px;
+}
+section.gallery> h1{
+    font-size: 50px;
+    color: rgb(00,00,00,0.8);
+}
+.gallery-contents{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.galary-images {
+    height: 256px;
+    padding: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+.galary-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 67px;
+}
+/* footer style */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 70px; */
+    padding: 51px 50px 77px 50px;
+}
+.footer-logo img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.footer-icon {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+.footer-icon img{
+    width: 32px;
+}
+footer p {
+    font-size: 18px;
+    margin-top: 20px;
+}
 
 
+/* MEDIA QUERY */
+/* tablet devices styles */
+@media only screen and (max-width:992px) {
+
+    .container{
+        width: 80%;
+    }
+    .header-content {
+        /* display: grid; */
+        grid-template-columns: repeat(1, 1fr);
+        /* align-items: center; */
+    }
+    .header-half {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    .header-half h1 {
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+    }
+    .players,.shedules,.gallery-contents{
+           grid-template-columns: repeat(2, 1fr);
+           width: 90%;
+        }
+        section.gallery> h1{
+            font-size: 38px;
+            
+        }
+    .gallery-contents{
+           width: 90%;
+        }
+    section.players-details{
+           grid-template-columns: repeat(2, 1fr);
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+        section.game-shedule{
+            grid-template-columns: repeat(2,1fr);
+        } 
+        .shedule-header h1 {
+            text-align: center;
+            font-size: 38px;
+        }
+}
+/* mobile devices styles */
+@media only screen and (max-width:688px) {
+    body h1{
+        color: blue; 
+    }
+    .container{
+        padding: 51px 0px 77px 0px;
+    }
+    .players,.shedules,.gallery-contents{
+        grid-template-columns: repeat(1, 1fr);
+        width: 95%;
+     }
+     section.players-details {
+        /* flex-direction: column; */
+        padding: 51px 0px 51px 0px;
+    }
+    section.game-shedule {
+        /* flex-direction: column; */
+        padding: 51px 0px 51px 0px;
+    }
+    footer {
+        /* flex-direction: column; */
+        padding: 51px 0px 51px 0px;
+    }
+    section.gallery {
+        /* flex-direction: column; */
+        padding: 51px 0px 51px 0px;
+    }
+    .header-half img {
+        width: 100%;
+        height: 100%;
+    }
+    .header-half h1 {
+        font-size: 38px;
+    }
+    .button {
+        padding: 0;
+        width: 110px;
+        font-size: 12px;
+    }
+    .team img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        /* border: 1px solid black; */
+    }
+}
